@@ -1,11 +1,11 @@
 {
-  "name": "devportal",
+  "name": "autocomplete",
   "version": "1.0.0",
   "description": "Portal for devs to connect",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index",
-    "start": "node index"
+    "dev": "cross-env NODE_ENV=development nodemon index",
+    "start": "cross-env NODE_ENV=production node index"
   },
   "author": "Aditya Srivastava",
   "license": "ISC",
@@ -23,6 +23,7 @@
     "uuid": "^8.3.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "nodemon": "^2.0.6"
   }
 }

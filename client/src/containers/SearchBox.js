@@ -14,11 +14,10 @@ export default function SearchBox() {
             "searchTerm": event.target.value
         })
 
-        if (response.status == 200) {
+        if (response.status === 200) {
             setDataset(response.data);
         } else {
             console.error(response);
-            setDataset([]);
         }
     }
 

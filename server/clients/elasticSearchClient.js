@@ -1,9 +1,10 @@
 const { Client } = require("@elastic/elasticsearch");
+const { ES_HOST, ES_USERNAME, ES_PASSWORD } = require('../config');
 
 module.exports = new Client({
-    node: 'https://212c20037f994853ac27c285a046b985.ap-south-1.aws.elastic-cloud.com:9243/',
+    node: ES_HOST,
     auth: {
-        username: 'elastic',
-        password: 'CoxY7ytDMYonnRJi27qpLQu5'
+        username: ES_USERNAME,
+        password: ES_PASSWORD
     }
 });

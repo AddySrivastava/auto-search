@@ -1,11 +1,12 @@
 import SeachBox from "./containers/SearchBox";
+import { Typography } from "@material-ui/core";
 
 export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Schoology</h1>
-      </header>
+      <Typography align="center" variant="h3" gutterBottom>
+        Schoology Employee Seach
+      </Typography>
       <SeachBox />
     </div>
   );

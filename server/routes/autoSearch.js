@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const apptCont = require('../controllers/appointmentControlller');
+const autoComplete = require('../controllers/autoComplete');
 
-router.post('/getAutoSearch', apptCont.autoSearch);
+router.post('/getAutoSearch', autoComplete.autoSearch);
 
 module.exports = router;
