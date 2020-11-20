@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser')
-const authMiddleware = require('./middleware/auth');
 const cors = require('cors');
 const app = express();
 
@@ -14,8 +13,6 @@ const unless = (routeArray, middleware) => {
 
 app.use(bodyParser.json());
 app.use(cors())
-
-//app.use(authMiddleware);
 
 app.use(serviceRoot, require('./routes/autoSearch'));
 

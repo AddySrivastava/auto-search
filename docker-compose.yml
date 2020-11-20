@@ -1,0 +1,22 @@
+version: "3"
+services:
+    auto-complete-ui:
+        container_name: autocomplete_ui
+        build:
+            context: ./client
+            dockerfile: Dockerfile
+        image: pacifier24/autocomplete_ui
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./client:/usr/src/app
+    auto-complete-service:
+        container_name: autocomplete_server
+        build:
+            context: ./server
+            dockerfile: Dockerfile
+        image: pacifier24/autocomplete_server
+        ports:
+            - "5000:5000"
+        volumes:
+            - ./server:/usr/src/app

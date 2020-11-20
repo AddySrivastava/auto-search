@@ -4,7 +4,8 @@
   "description": "Portal for devs to connect",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index"
+    "dev": "nodemon index",
+    "start": "node index"
   },
   "author": "Aditya Srivastava",
   "license": "ISC",
