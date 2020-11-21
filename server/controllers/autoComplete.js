@@ -1,6 +1,7 @@
 const elasticSearch = require("../lib/elasticsearch");
 const { EMPLOYEES_WILDCARD_FIELDS } = require('../utils/constants')
 
+
 exports.autoSearch = async (req, res) => {
     const { searchTerm } = req.body;
 

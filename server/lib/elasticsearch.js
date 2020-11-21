@@ -1,6 +1,11 @@
 const esClient = require("../clients/elasticSearchClient");
 const { EMPLOYEES_INDEX_NAME, EMPLOYEES_INDEX_TYPE } = require("../utils/constants");
 
+/*
+ * Generic lib function to return the matches based on searchTerm.
+ * @searchTerm (String) - pattern that need to search
+ * @fields (Array) - array of fields where we search the searchTerm pattern
+ */
 exports.wildcardSearch = async (searchTerm, fields) => {
     try {
         const response = await esClient.search({
